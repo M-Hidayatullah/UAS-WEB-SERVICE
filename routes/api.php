@@ -23,5 +23,8 @@ Route::post('/login', App\Http\Controllers\Api\LoginController::class)->name('lo
 
 Route::group(['middleware' => ['auth:api']], function () {
 
+    Route::apiResource('/category', App\Http\Controllers\Api\CategoryController::class);
+    Route::apiResource('/comment', App\Http\Controllers\Api\CommentController::class);
+    Route::apiResource('/berita', App\Http\Controllers\Api\NewsController::class);
     Route::post('/logout', App\Http\Controllers\Api\LogoutController::class)->name('logout');
 });

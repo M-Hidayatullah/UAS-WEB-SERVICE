@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('comments', function (Blueprint $table) {
-            $table->foreign('news_id')->references('id')->on('news')->onUpdate('CASCADE')->onDelete('RESTRICT');
+            $table->foreign('news_id')->references('id')->on('news')->onUpdate('CASCADE')->onDelete('CASCADE');
         });
     }
 

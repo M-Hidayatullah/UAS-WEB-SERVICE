@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
             $table->foreignId('news_id');
+            $table->string('pesan');
             $table->string('email');
             $table->timestamps();
         });
