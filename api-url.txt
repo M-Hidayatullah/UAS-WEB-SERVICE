@@ -1,0 +1,2 @@
+local : http://localhost:8000
+production : https://dayat-web-service.herokuapp.com/
